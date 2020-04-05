@@ -1,0 +1,58 @@
+{
+  "name": "volunteer_bank",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.1.1",
+    "@testing-library/react": "^10.0.1",
+    "@testing-library/user-event": "^10.0.0",
+    "@types/google-map-react": "^1.1.5",
+    "@types/jest": "^25.1.4",
+    "@types/node": "^13.9.3",
+    "@types/react": "^16.9.25",
+    "@types/react-dom": "^16.9.5",
+    "@types/react-router-dom": "^5.1.3",
+    "@types/styled-components": "^5.0.1",
+    "antd": "^4.0.4",
+    "apollo-boost": "^0.4.7",
+    "google-map-react": "^1.1.7",
+    "graphql": "^14.6.0",
+    "i18next": "^19.3.4",
+    "i18next-xhr-backend": "^3.2.2",
+    "moment": "^2.24.0",
+    "react": "^16.13.1",
+    "react-apollo": "^3.1.3",
+    "react-dom": "^16.13.1",
+    "react-geolocated": "^3.0.1",
+    "react-i18next": "^11.3.4",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.1",
+    "styled-components": "^5.0.1",
+    "typescript": "~3.8.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "codegen:schema": "apollo client:download-schema --endpoint=http://localhost:9000/api",
+    "codegen:generate": "apollo client:codegen --localSchemaFile=./schema.json --includes=src/**/*.ts --globalTypesFile=./src/lib/graphql/globalTypes.ts --target=typescript",
+    "reactide-server": "webpack-dev-server --config reactide.config.js --mode development --hot"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "proxy": "http://localhost:9000"
+}
